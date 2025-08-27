@@ -5,7 +5,7 @@ const Main = () => {
   const [cafes, setCafes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/coffee") 
+    fetch("/coffee") 
       .then((res) => res.json())
       .then((data) => setCafes(data))
       .catch((err) => console.error("Erro ao buscar dados:", err));
