@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "nome": "Le Jardin Café et Art",
+    "cidade": "Lauro de Freitas",
+    "design": "Artístico e aconchegante",
+    "tipo": "Cafeteria",
+    "descricao": "Ambiente charmoso com arte, café especial e decoração acolhedora",
+    "imagem": "https://www.instagram.com/cafe.lejardin/",
+    "link": "https://www.instagram.com/cafe.lejardin/"
+  },
+  {
+    "id": 2,
+    "nome": "California Coffee",
+    "cidade": "Lauro de Freitas",
+    "design": "Moderno e descolado",
+    "tipo": "Café",
+    "descricao": "Cafés gourmets em ambiente urbano com estilo contemporâneo",
+    "imagem": "https://www.instagram.com/californiacoffeelf/",
+    "link": "https://www.instagram.com/californiacoffeelf/"
+  },
+  {
+    "id": 3,
+    "nome": "Flow Coffee",
+    "cidade": "Lauro de Freitas",
+    "design": "Minimalista e elegante",
+    "tipo": "Café",
+    "descricao": "Cafeteria com ambiente clean e foco em cafés especiais",
+    "imagem": "https://www.instagram.com/flowcoffee_laurodefreitas/",
+    "link": "https://www.instagram.com/flowcoffee_laurodefreitas/"
+  },
+  {
+    "id": 4,
+    "nome": "Cantinho da Roça",
+    "cidade": "Lauro de Freitas",
+    "design": "Rústico e tradicional",
+    "tipo": "Café",
+    "descricao": "Café com decoração rural e clima acolhedor",
+    "imagem": "https://www.instagram.com/cafecantinhodaroca_/",
+    "link": "https://www.instagram.com/cafecantinhodaroca_/"
+  },
+  {
+    "id": 5,
+    "nome": "Duckbill Cookies & Coffee",
+    "cidade": "Lauro de Freitas",
+    "design": "Urbano e jovem",
+    "tipo": "Café e Cookies",
+    "descricao": "Franquia com foco em cookies e cafés em ambiente descontraído",
+    "imagem": "https://www.facebook.com/duckbill.laurodefreitas/",
+    "link": "https://www.facebook.com/duckbill.laurodefreitas/"
+  }
+]
