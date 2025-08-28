@@ -1,5 +1,5 @@
 /* Main.css */
-.lista-cafes p {
+.lista-cafes .loading {
   font-style: italic;
   color: #888;
   animation: pulse 1s infinite;
@@ -9,4 +9,81 @@
   0% { opacity: 0.5; }
   50% { opacity: 1; }
   100% { opacity: 0.5; }
+}
+
+
+.container-main{
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Título */
+.lista-cafes h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Card individual */
+.card-cafe {         
+  max-width: 250px;
+  flex-direction: row;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 16px;
+  transition: transform 0.2s ease;
+}
+
+.card-cafe:hover {
+  transform: scale(1.02);
+}
+
+/* Imagem do café */
+.card-cafe img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Título do café */
+.card-cafe h2 {
+  font-size: 1.4em;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* Texto */
+.card-cafe p {
+  font-size: 0.9em;
+  margin: 4px 0;
+  color: #555;
+}
+
+/* Link */
+.card-cafe a {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #775649;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.card-cafe a:hover {
+  background-color: #6e432b;
+}
+
+/* Mensagem de carregamento */
+.loading {
+  text-align: center;
+  font-size: 1em;
+  color: #888;
 }

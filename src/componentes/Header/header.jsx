@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.css";
-import cafeteriaImg from "../../imagens/cafeteria.png";
+import cafeteriaImg from "../logo/cafeteria.png";
 
 const header = () => {
   return (
@@ -28,6 +28,8 @@ const header = () => {
           Explorar Cafés
         </button>
       </div>
+
+      
     </div>
   );
 };
