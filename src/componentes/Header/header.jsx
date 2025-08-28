@@ -8,7 +8,7 @@ const header = () => {
       <div>
         <h3 className="titulo">Coffee with design</h3>
         <nav>
-          <a href="#secao-cafes">Início</a>
+          <a href="#">Início</a>
           <a href="#secao-sobre">Sobre</a>
         </nav>
         <img
@@ -25,7 +25,7 @@ const header = () => {
           className="botao-explorar"
           onClick={() => {
             document
-              .getElementById("secao-cafes")
+              .getElementById("secao-sobre")
               .scrollIntoView({ behavior: "smooth" });
           }}
         >

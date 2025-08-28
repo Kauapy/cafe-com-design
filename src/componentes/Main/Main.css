@@ -135,3 +135,9 @@
 .design{
   font-weight: lighter;
 }
+
+.blog-section{
+  float: right;
+  margin-top: -21rem;
+  margin-right: 1rem;
+}

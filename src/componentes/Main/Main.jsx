@@ -5,7 +5,7 @@ const Main = () => {
   const [cafes, setCafes] = useState([]);
 
   useEffect(() => {
-    fetch("/coffee") 
+    fetch("/coffee")
       .then((res) => res.json())
       .then((data) => setCafes(data))
       .catch((err) => console.error("Erro ao buscar dados:", err));
@@ -14,25 +14,29 @@ const Main = () => {
   return (
     <div>
       <div className="lista-cafes">
-      <h1 className="cafe-titulo">Cafés com Design</h1>
-      {cafes.length === 0 ? (
-        <p className="loading">Carregando cafés...</p>
-      ) : (
-        cafes.map((cafe) => (
-          <div key={cafe.id} className="card-cafe">
-            <h2>{cafe.nome}</h2>
-            <img src={`/imagens/${cafe.imagem}`} alt={cafe.nome} />
-            <p><strong>Cidade:</strong> {cafe.cidade}</p>
-            <p><strong>Estilo:</strong> {cafe.design}</p>
-            <p>{cafe.descricao}</p>
-            <a href={cafe.link} target="_blank" rel="noopener noreferrer">
-              Ver mais
-            </a>
-          </div>
-        ))
-      )}
-        </div>
-        
+        <h1 className="cafe-titulo">Cafés com Design</h1>
+        {cafes.length === 0 ? (
+          <p className="loading">Carregando cafés...</p>
+        ) : (
+          cafes.map((cafe) => (
+            <div key={cafe.id} className="card-cafe">
+              <h2>{cafe.nome}</h2>
+              <img src={`/imagens/${cafe.imagem}`} alt={cafe.nome} />
+              <p>
+                <strong>Cidade:</strong> {cafe.cidade}
+              </p>
+              <p>
+                <strong>Estilo:</strong> {cafe.design}
+              </p>
+              <p>{cafe.descricao}</p>
+              <a href={cafe.link} target="_blank" rel="noopener noreferrer">
+                Ver mais
+              </a>
+            </div>
+          ))
+        )}
+      </div>
+
       <div id="secao-cafes">
         <h1 className="t1-sobre">Sobre nós</h1>
         <p className="p-sobre">
@@ -43,11 +47,28 @@ const Main = () => {
           encontrar seu próximo lugar favorito.
         </p>
 
-        <h2 className="p-citacao"><span className="design">"Design é inteligência <br /> feita visível"</span> <span className="autor"></span>Robin Willians</h2>
+        <h2 className="p-citacao">
+          <span className="design">
+            "Design é inteligência <br /> feita visível"
+          </span>{" "}
+          <span className="autor"></span>Robin Willians
+        </h2>
       </div>
 
+      <div className="blog-section">
+        <h1>Blog</h1>
+        <ul>
+          <li>
+            Como o design influência a experiência <br /> de tomar um café
+          </li>
+          <br />
+          <li>Como a hierarquia visual guia até o último gole de café</li> <br />
+          <li>
+            Hierarquia visual: o espresso que guia o olhar antes do leite.
+          </li>
+        </ul>
+      </div>
     </div>
-
   );
 };
 
