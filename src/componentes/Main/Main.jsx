@@ -12,7 +12,7 @@ const Main = () => {
   }, []);
 
   return (
-    <div className="container-main">
+    <div>
       <div className="lista-cafes">
       <h1 className="cafe-titulo">Cafés com Design</h1>
       {cafes.length === 0 ? (
@@ -32,6 +32,20 @@ const Main = () => {
         ))
       )}
         </div>
+        
+      <div id="secao-cafes">
+        <h1 className="t1-sobre">Sobre nós</h1>
+        <p className="p-sobre">
+          Somos apaixonados por café e design. Nosso objetivo é conectar
+          entusiastas de café com locais que oferecem uma experiência única,
+          onde o design do ambiente complementa a qualidade do café servido.
+          Explore nossa seleção de cafés cuidadosamente escolhidos para
+          encontrar seu próximo lugar favorito.
+        </p>
+
+        <h2 className="p-citacao"><span className="design">"Design é inteligência <br /> feita visível"</span> <span className="autor"></span>Robin Willians</h2>
+      </div>
+
     </div>
 
   );

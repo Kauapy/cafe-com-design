@@ -19,7 +19,7 @@
 }
 
 
-.container-main{
+.lista-cafes{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +46,7 @@
 
 /* Card individual */
 .card-cafe {         
-  background-color: white;
+  background-color: rgb(241, 241, 241);
   max-width: 250px;
   min-width: 250px;
   border-radius: 8px;
@@ -105,4 +105,33 @@
   font-size: 1em;
   color: #888;
   width: 100%;
+}
+
+.t1-sobre{
+  margin-left: 1.5rem;
+}
+
+.p-sobre{
+  width: 50%;
+  margin-left: 1.5rem;
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+}
+
+.p-citacao{
+  margin-left: 1.5rem;
+  font-weight: light;
+  font-style: italic;
+}
+
+.autor{
+  margin-left: 0.5rem;
+}
+
+#secao-cafes{
+  margin-top: 5rem;
+}
+
+.design{
+  font-weight: lighter;
 }

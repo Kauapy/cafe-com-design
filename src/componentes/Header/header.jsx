@@ -7,6 +7,10 @@ const header = () => {
     <div className="container-header">
       <div>
         <h3 className="titulo">Coffee with design</h3>
+        <nav>
+          <a href="#secao-cafes">Início</a>
+          <a href="#secao-sobre">Sobre</a>
+        </nav>
         <img
           src={cafeteriaImg}
           alt="imagem cafeteria"
@@ -28,8 +32,6 @@ const header = () => {
           Explorar Cafés
         </button>
       </div>
-
-      
     </div>
   );
 };

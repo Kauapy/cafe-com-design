@@ -1,7 +1,8 @@
 
 .titulo{
     padding-left: 2rem;
-    font-weight: lighter;
+    font-weight: light;
+    color: rgb(78, 43, 23);
 }
 
 .imagem-cafeteria{
@@ -42,4 +43,22 @@
 .botao-explorar:hover{
     background-color: #c16733;
     transition: 0.3s;
+}
+
+nav{
+    display: flex;
+    float: right;
+    padding-right: 2rem;
+    margin-top: -2.2rem;
+    gap: 2rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(78, 43, 23);
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: underline;
 }
