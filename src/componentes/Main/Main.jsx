@@ -14,7 +14,7 @@ const Main = () => {
   return (
     <div className="container-main">
       <div className="lista-cafes">
-      <h1>Cafés com Design</h1>
+      <h1 className="cafe-titulo">Cafés com Design</h1>
       {cafes.length === 0 ? (
         <p className="loading">Carregando cafés...</p>
       ) : (
