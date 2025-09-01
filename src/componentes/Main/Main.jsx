@@ -5,7 +5,7 @@ const Main = () => {
   const [cafes, setCafes] = useState([]);
 
   useEffect(() => {
-    fetch("/coffee")
+    fetch("https://cafe-com-design-production.up.railway.app")
       .then((res) => res.json())
       .then((data) => setCafes(data))
       .catch((err) => console.error("Erro ao buscar dados:", err));
