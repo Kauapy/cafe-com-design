@@ -11,6 +11,6 @@ app.get("/coffee", (req, res) => {
   res.json(coffee);
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });
