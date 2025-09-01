@@ -5,7 +5,7 @@ const Main = () => {
   const [cafes, setCafes] = useState([]);
 
   useEffect(() => {
-    fetch("https://cafe-com-design-production.up.railway.app")
+    fetch("https://cafe-com-design-production.up.railway.app/coffee")
       .then((res) => res.json())
       .then((data) => setCafes(data))
       .catch((err) => console.error("Erro ao buscar dados:", err));
@@ -62,7 +62,8 @@ const Main = () => {
             Como o design influência a experiência <br /> de tomar um café
           </li>
           <br />
-          <li>Como a hierarquia visual guia até o último gole de café</li> <br />
+          <li>Como a hierarquia visual guia até o último gole de café</li>{" "}
+          <br />
           <li>
             Hierarquia visual: o espresso que guia o olhar antes do leite.
           </li>
