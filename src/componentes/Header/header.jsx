@@ -8,7 +8,7 @@ const header = () => {
       <div>
         <h3 className="titulo">Coffee with design</h3>
         <nav>
-         <a href="/alguma-rota">Clique aqui</a>
+         <a href="/inicio">Inicio</a>
         </nav>
         <img
           src={cafeteriaImg}

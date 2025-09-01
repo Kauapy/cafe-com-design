@@ -3,20 +3,51 @@ import "./Main.css";
 
 const Main = () => {
   const [cafes, setCafes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://cafe-com-design-production.up.railway.app/coffee")
-      .then((res) => res.json())
-      .then((data) => setCafes(data))
-      .catch((err) => console.error("Erro ao buscar dados:", err));
+    console.log("🔄 Fazendo requisição para /coffee...");
+    
+    fetch("/coffee")
+      .then((res) => {
+        console.log("📡 Resposta recebida:", res.status);
+        if (!res.ok) {
+          throw new Error(`HTTP ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        console.log("☕ Dados recebidos:", data);
+        setCafes(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("❌ Erro ao buscar dados:", err);
+        setError(err.message);
+        setLoading(false);
+      });
   }, []);
+
+  if (loading) {
+    return <div><p className="loading">Carregando cafés...</p></div>;
+  }
+
+  if (error) {
+    return (
+      <div>
+        <p style={{color: 'red'}}>❌ Erro: {error}</p>
+        <p>Tente acessar: <a href="http://localhost:5000/coffee" target="_blank">http://localhost:5000/coffee</a></p>
+      </div>
+    );
+  }
 
   return (
     <div>
       <div className="lista-cafes">
         <h1 className="cafe-titulo">Cafés com Design</h1>
         {cafes.length === 0 ? (
-          <p className="loading">Carregando cafés...</p>
+          <p>Nenhum café encontrado.</p>
         ) : (
           cafes.map((cafe) => (
             <div key={cafe.id} className="card-cafe">
