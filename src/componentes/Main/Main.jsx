@@ -8,7 +8,7 @@ const Main = () => {
 
   useEffect(() => {
     console.log("🔄 Fazendo requisição para /coffee...");
-    
+
     fetch("/coffee")
       .then((res) => {
         console.log("📡 Resposta recebida:", res.status);
@@ -30,14 +30,27 @@ const Main = () => {
   }, []);
 
   if (loading) {
-    return <div><p className="loading">Carregando cafés...</p></div>;
+    return (
+      <div>
+        <p className="loading">Carregando cafés...</p>
+      </div>
+    );
   }
 
   if (error) {
     return (
       <div>
-        <p style={{color: 'red'}}>❌ Erro: {error}</p>
-        <p>Tente acessar: <a href="http://localhost:5000/coffee" target="_blank">http://localhost:5000/coffee</a></p>
+        <p style={{ color: "red" }}>❌ Erro: {error}</p>
+        <p>
+          Tente acessar:{" "}
+          <a
+            href="http://localhost:5000/coffee"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            http://localhost:5000/coffee
+          </a>
+        </p>
       </div>
     );
   }
@@ -60,7 +73,11 @@ const Main = () => {
                 <strong>Estilo:</strong> {cafe.design}
               </p>
               <p>{cafe.descricao}</p>
-              <a href={cafe.link} target="_blank" rel="noopener noreferrer">
+              <a
+                href={cafe.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Ver mais
               </a>
             </div>
