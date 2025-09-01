@@ -24,9 +24,10 @@ const header = () => {
         <button
           className="botao-explorar"
           onClick={() => {
-            document
-              .getElementById("secao-sobre")
-              .scrollIntoView({ behavior: "smooth" });
+            const lista = document.getElementsByClassName("lista-cafes")[0];
+            if (lista) {
+              lista.scrollIntoView({ behavior: "smooth" });
+            }
           }}
         >
           Explorar Cafés
